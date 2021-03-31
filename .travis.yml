@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t shellyygtw/Docker-Kubernetes-Practice -f Dockerfile.dev .
+  - docker build -t shellyygtw/docker-kubernetes-practice -f Dockerfile.dev .
 
 script:
-  - docker run shellyygtw/Docker-Kubernetes-Practice npm run test -- --coverage
+  - docker run shellyygtw/docker-kubernetes-practice npm run test -- --coverage
