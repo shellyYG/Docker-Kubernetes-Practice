@@ -7,6 +7,6 @@ before_install:
   - docker build -t shellyygtw/docker-kubernetes-practice -f Dockerfile.dev .
 
 script:
-  - docker run shellyygtw/docker-kubernetes-practice npm run test -- --coverage
+  - docker run -e CI=true shellyygtw/docker-kubernetes-practice npm run test
 access_key_id: $AWS_ACCESS_KEY
 secret_access_key: $AWS_SECRET_KEY
